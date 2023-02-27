@@ -16,7 +16,7 @@ export function Button({ type = "button", variant, children }: Props) {
     <button
       type={type}
       className={classNames(
-        "py-2 px-4 rounded-md bg-primary font-bold text-white",
+        "py-2 px-4 rounded-md font-bold",
         bgColor
       )}
     >
