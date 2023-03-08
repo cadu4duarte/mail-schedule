@@ -15,8 +15,8 @@ export function DateTimerPicker({name}: Props) {
 			control={control}
 			render={({ field: { onChange, value}}) => (
 				<DatePicker
-					selected={new Date()}
-					onChange={(date: Date) => onChange(date.toISOString())}
+					selected={value}
+					onChange={(date: Date) => onChange(date)}
 
 				/>
 			)}
