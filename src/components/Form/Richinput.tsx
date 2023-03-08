@@ -13,11 +13,14 @@ export function RichInput({ name }: Props) {
 		<Controller
 			name={name}
 			control={control}
-			render={({ field: { onChange, value } }) => (
+			render={({ field: { onBlur, onChange, value } }) => (
 				<JoditEditor
 					value={value}
 					config={{ readonly: false }}
-					onBlur={onChange}
+					onBlur={(value: string) => {
+						onBlur();
+						onChange(value)
+					}}
 				/>
 			)}
 		/>
